@@ -17,7 +17,7 @@ or
 
 make tests 
 
-
+# Attributes
 * `imdbId` is IMDB movie identifier
 * `screenId` is an externally managed identifier of information when and where the movie is screened.
 * `movieTitle` is the title of the movie
