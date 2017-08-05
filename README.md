@@ -39,14 +39,15 @@ POST /admin/movie
         "screenId": "screen_123456"
     }    
 
-201 Created (Registration Success)
-409 Conflict (Already Registered)
-400 Bad Request
+* 201 Created (Registration Success)
+* 409 Conflict (Already Registered)
+* 400 Bad Request
 
 Checks:
-{imdbId and screenId} combination is unique
-multiple screenId with single imdbId is allowed
-movieTitle has been fetched using http://themoviedb.org/documentation/api  
+
+* {imdbId and screenId} combination is unique
+* multiple screenId with single imdbId is allowed
+* movieTitle has been fetched using http://themoviedb.org/documentation/api  
 
 
 ### Reserve a seat at the movie
@@ -58,17 +59,17 @@ POST /user/movie
         "screenId": "screen_123456"
     }    
 
-200 OK (Reserved a seat)
-403 Forbidden (Seats are full)
-404 Not Found (No Movie available on the ScreenID)
-400 Bad Request
+* 200 OK (Reserved a seat)
+* 403 Forbidden (Seats are full)
+* 404 Not Found (No Movie available on the ScreenID)
+* 400 Bad Request
 
 ### Retrieve information about the movie
 
 GET /user/movie/:imdbId/screen/:screenId
 
 Response
-200 OK
+* 200 OK
 
     {
         "imdbId": "tt0111161",
@@ -78,8 +79,8 @@ Response
         "reservedSeats": 50
     }   
     
-404 Not Found (No Movie available on the ScreenID)
-400 Bad Request
+* 404 Not Found (No Movie available on the ScreenID)
+* 400 Bad Request
 
 ### Any other API
 400 Bad Request
